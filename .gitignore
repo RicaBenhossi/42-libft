@@ -2,3 +2,5 @@
 core
 *.gch
 **/.git
+*.desktop
+*.pdf
