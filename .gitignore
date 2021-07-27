@@ -1,6 +1,5 @@
 *.out
 core
 *.gch
-**/.git
 *.desktop
 *.pdf
