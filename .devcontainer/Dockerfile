@@ -26,3 +26,4 @@ RUN echo "set t_Co=256" >> /home/vscode/.vimrc
 RUN echo "syntax on" >> /home/vscode/.vimrc
 RUN echo "colorscheme elflord" >> /home/vscode/.vimrc
 # Change zsh theme to zhann
+RUN sed -i '11s/.*/ZSH_THEME=\"zhann\"/' /home/vscode/.zshrc
