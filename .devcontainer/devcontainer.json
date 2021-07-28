@@ -18,7 +18,8 @@
 		"editor.tabSize": 4,
 		"files.trimTrailingWhitespace": true,
 		"files.trimFinalNewlines": true,
-		"files.insertFinalNewline": true
+		"files.insertFinalNewline": true,
+		"terminal.integrated.cursorBlinking": true
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
