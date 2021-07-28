@@ -14,19 +14,29 @@
 		"editor.insertSpaces": false,
 		"editor.detectIndentation": false,
 		"terminal.integrated.defaultProfile.linux": "zsh",
-		"editor.rulers": [80],
 		"editor.tabSize": 4,
 		"files.trimTrailingWhitespace": true,
 		"files.trimFinalNewlines": true,
 		"files.insertFinalNewline": true,
-		"terminal.integrated.cursorBlinking": true
+		"terminal.integrated.cursorBlinking": true,
+		"[cpp]": {
+			"editor.wordBasedSuggestions": false,
+			"editor.suggest.insertMode": "replace",
+			"editor.semanticHighlighting.enabled": true,
+			"editor.rulers": [80]
+		},
+		"[c]": {
+			"editor.wordBasedSuggestions": false,
+			"editor.suggest.insertMode": "replace",
+			"editor.semanticHighlighting.enabled": true,
+			"editor.rulers": [80]
+		}
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-vscode.cpptools",
 		"ms-vscode.cpptools-extension-pack",
-		"eamodio.gitlens-insiders",
 		"ms-vscode.makefile-tools"
 	],
 
