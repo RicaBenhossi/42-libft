@@ -9,7 +9,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends python3-pip
 
 RUN pip3 install norminette
-RUN apt install vim -y
+RUN apt install vim libbsd-dev -y
 
 RUN echo "\n# My Aliases" >> /home/vscode/.zshrc
 RUN echo "alias norm='norminette -R CheckForbiddenSourceHeader'" >> /home/vscode/.zshrc
