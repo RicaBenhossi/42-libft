@@ -3,9 +3,10 @@
         {
             "type": "cppbuild",
             "label": "C/C++: clang-9 build active file",
-            "command": "/usr/bin/clang-9",
+            "command": "/usr/bin/clang",
             "args": [
                 "-g",
+				"-lbsd",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
