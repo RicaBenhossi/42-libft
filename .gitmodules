@@ -4,3 +4,6 @@
 [submodule "42tests"]
 	path = 42tests
 	url = git@github.com:RicaBenhossi/42tests.git
+[submodule "libftest"]
+	path = libftest
+	url = git@github.com:jtoty/Libftest.git

@@ -19,6 +19,9 @@
 		"files.trimFinalNewlines": true,
 		"files.insertFinalNewline": true,
 		"terminal.integrated.cursorBlinking": true,
+		"editor.tabCompletion": "off",
+		"42header.username": "luricard",
+		"42header.email": "luricard@student.42sp.org.br",
 		"[cpp]": {
 			"editor.wordBasedSuggestions": false,
 			"editor.suggest.insertMode": "replace",
@@ -37,7 +40,8 @@
 	"extensions": [
 		"ms-vscode.cpptools",
 		"ms-vscode.cpptools-extension-pack",
-		"ms-vscode.makefile-tools"
+		"ms-vscode.makefile-tools",
+		"kube.42header"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

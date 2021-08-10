@@ -8,8 +8,10 @@
                 "-g",
 				"-lbsd",
                 "${file}",
+				"-L.",
+				"-lft",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
