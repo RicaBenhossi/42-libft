@@ -7,3 +7,6 @@
 [submodule "libftest"]
 	path = libftest
 	url = git@github.com:jtoty/Libftest.git
+[submodule "libftester"]
+	path = libftester
+	url = git@github.com:Tripouille/libftTester.git
