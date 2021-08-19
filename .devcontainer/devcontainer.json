@@ -40,7 +40,6 @@
 	"extensions": [
 		"ms-vscode.cpptools",
 		"ms-vscode.cpptools-extension-pack",
-		"ms-vscode.makefile-tools",
 		"kube.42header",
 		"gurumukhi.selected-lines-count",
 		"wakatime.vscode-wakatime"

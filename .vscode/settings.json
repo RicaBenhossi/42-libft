@@ -2,6 +2,7 @@
 	"files.associations": {
 		"*.html": "html",
 		"ctype.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"stdio.h": "c"
 	}
 }
