@@ -10,3 +10,6 @@
 [submodule "42tests"]
 	path = 42tests
 	url = git@github.com:RicaBenhossi/42tests.git
+[submodule "warmachine"]
+	path = warmachine
+	url = git@github.com:ska42/libft-war-machine.git
