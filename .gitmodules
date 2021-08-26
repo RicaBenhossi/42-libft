@@ -1,3 +1,18 @@
 [submodule "libft"]
 	path = libft
 	url = git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-b5baf85b-25c0-4e44-918b-d222a10863e3-3681687
+[submodule "libftTester"]
+	path = libftTester
+	url = git@github.com:Tripouille/libftTester.git
+[submodule "Libftest"]
+	path = Libftest
+	url = git@github.com:jtoty/Libftest.git
+[submodule "libft-war-machine"]
+	path = libft-war-machine
+	url = git@github.com:ska42/libft-war-machine.git
+[submodule "libft-unit-test"]
+	path = libft-unit-test
+	url = git@github.com:alelievr/libft-unit-test.git
+[submodule "42tests"]
+	path = 42tests
+	url = git@github.com:RicaBenhossi/42tests.git
