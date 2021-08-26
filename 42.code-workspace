@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../42tests"
+		},
+		{
+			"path": "../42_3rd_tests"
 		}
 	],
 	"settings": {
