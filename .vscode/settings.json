@@ -5,6 +5,7 @@
 		"libft.h": "c",
 		"stdio.h": "c",
 		"random": "c",
-		"*.tcc": "c"
+		"*.tcc": "c",
+		"streambuf": "c"
 	}
 }
