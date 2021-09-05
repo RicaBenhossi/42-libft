@@ -10,6 +10,3 @@
 [submodule "libft-unit-test"]
 	path = libft-unit-test
 	url = git@github.com:alelievr/libft-unit-test.git
-[submodule "42tests"]
-	path = 42tests
-	url = git@github.com:RicaBenhossi/42tests.git
