@@ -41,7 +41,7 @@ OBJS 	= $(SRCS:.c=.o)
 RANLIB	= ranlib $(NAME)
 
 .c.o:
-			@$(CC) $(CFLAG) -c $< -o $(<:.c=.o)
+			$(CC) $(CFLAG) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
 			ar $(ARFLAGS) $(NAME) $(OBJS)
