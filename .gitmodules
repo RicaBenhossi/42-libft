@@ -1,0 +1,3 @@
+[submodule "libft"]
+	path = libft
+	url = git@vogsphere-v2.42sp.org.br:vogsphere/intra-uuid-0c657748-dcc8-44e2-bcdd-e071cdb0d2a2-3774358
