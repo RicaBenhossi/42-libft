@@ -17,6 +17,7 @@
 		"stdexcept": "c",
 		"system_error": "c",
 		"typeinfo": "c",
-		"algorithm": "c"
+		"algorithm": "c",
+		"unistd.h": "c"
 	}
 }
