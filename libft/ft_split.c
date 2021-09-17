@@ -6,7 +6,7 @@
 /*   By: luricard <luricard@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 06:13:15 by luricard          #+#    #+#             */
-/*   Updated: 2021/09/14 19:55:53 by luricard         ###   ########.fr       */
+/*   Updated: 2021/09/16 21:54:55 by luricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,21 @@ static int	count_elements(const char *s, char c)
 	return (word_count);
 }
 
-static char	*get_word(const char *s, int start, int end, char **result)
+static void	free_mem(char **result, size_t size)
+{
+	size_t	i;
+
+	i = -1;
+	while (++i < size)
+	{
+		free(result[i]);
+		result[i] = NULL;
+	}
+	free(result);
+	result = NULL;
+}
+
+static char	*get_word(const char *s, int start, int end)
 {
 	int		i;
 	int		word_len;
@@ -44,7 +58,6 @@ static char	*get_word(const char *s, int start, int end, char **result)
 	word_len = end - start + 1;
 	word = (char *)malloc((word_len * sizeof(char)));
 	if (!word)
-	// TODO set result free.
 		return (NULL);
 	i = 0;
 	while (start < end)
@@ -53,11 +66,36 @@ static char	*get_word(const char *s, int start, int end, char **result)
 	return (word);
 }
 
+static void	set_result(char **result, char c, const char *s)
+{
+	int	i;
+	int	j;
+	int	word_start;
+
+	i = -1;
+	j = 0;
+	word_start = -1;
+	while (++i <= (int)ft_strlen(s))
+	{
+		if (s[i] != c && word_start < 0)
+			word_start = i;
+		else if ((s[i] == c || i == (int)ft_strlen(s)) && word_start >= 0)
+		{
+			result[j] = get_word(s, word_start, i);
+			if (!result[j])
+			{
+				free_mem(result, ft_strlen(s));
+				return ;
+			}
+			j++;
+			word_start = -1;
+		}
+	}
+	result[j] = NULL;
+}
+
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		word_start;
 	char	**result;
 
 	if (!s)
@@ -65,20 +103,6 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (count_elements(s, c) + 1));
 	if (!result)
 		return (NULL);
-	i = -1;
-	j = 0;
-	word_start = -1;
-	// TODO: remove this while to a function in order to implement a free on result.
-	while (++i <= (int) ft_strlen(s))
-	{
-		if (s[i] != c && word_start < 0)
-			word_start = i;
-		else if ((s[i] == c || i == (int) ft_strlen(s)) && word_start >= 0)
-		{
-			result[j++] = get_word(s, word_start, i, result);
-			word_start = -1;
-		}
-	}
-	result[j] = NULL;
+	set_result(result, c, s);
 	return (result);
 }
