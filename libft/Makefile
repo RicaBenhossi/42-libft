@@ -35,7 +35,7 @@ SRC		= ft_atoi.c \
 			ft_toupper.c
 CFLAGS 	= -Wall -Wextra -Werror
 ARFLAGS	= rcs
-CC			= clang
+CC		= clang
 RM		= rm -f
 OBJ		= $(SRC:.c=.o)
 
@@ -53,6 +53,13 @@ clean:
 fclean:		clean
 			$(RM) $(NAME)
 
+cleanall:	fclean
+			$(RM) *.out core *.so
+
 re:			fclean all
 
-.PHONY:		all clean fclean re
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
+.PHONY:		all clean fclean re cleanall
