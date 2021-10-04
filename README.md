@@ -1,2 +1,2 @@
-# 42
-All projects I'm doing (or have ever done) at 42sp.
+# 42-libft
+Our first library on C.
