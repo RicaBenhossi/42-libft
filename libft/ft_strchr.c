@@ -6,7 +6,7 @@
 /*   By: luricard <luricard@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 10:08:59 by luricard          #+#    #+#             */
-/*   Updated: 2021/10/03 17:03:17 by luricard         ###   ########.fr       */
+/*   Updated: 2021/08/19 19:30:21 by luricard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*found;
 
-	if (!s)
-		return (0);
-	if (c == '\0')
-		return ((char *)&s[ft_strlen(s)]);
 	found = (char *)s;
 	while (*found)
 	{
